@@ -23,18 +23,18 @@ void DFS(int a, int b, int sum)
 		mx = sum;
 	for (int i = 0; i < 4; i++)
 	{
-    int x = a + x_dir[i];
+    		int x = a + x_dir[i];
 		int y = b + y_dir[i];
 		if (x >= 1 && x <= r && y >= 1 && y <= c) // 각각의 x, y 좌표가 표의 크기를 벗어나지 않고 해당 인덱스가 방문처리 되지않았으면 DFS해준다.
-    {
+    		{
 			if (check[map[x][y]] == 0)
 			{
-        check[map[x][y]] = 1;
+        			check[map[x][y]] = 1;
 				DFS(x, y, sum + 1);
 				check[map[x][y]] = 0;
 			}
 		}		
-  }
+  	}
 }
 
 int main()
